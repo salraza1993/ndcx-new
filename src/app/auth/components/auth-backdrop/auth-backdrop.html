@@ -1,0 +1,34 @@
+<div class="banner-perspective-container">
+  <div
+    class="grid-list-container"
+    style="--item-width: calc(500px + 5vw); --item-height: calc(500px + 5vw); --item-quantity: {{ bannerList.length }}">
+    <ul class="banner-list" data-reverse="false">
+      @for (banner of bannerList; track banner) {
+        <li class="banner-list__item" [style.--position]="$index + 1">
+          <img [src]="banner" [alt]="'Banner-' + $index" />
+        </li>
+      }
+    </ul>
+    <ul class="banner-list" data-reverse="true">
+      @for (banner of bannerList; track banner) {
+        <li class="banner-list__item" [style.--position]="$index + 1">
+          <img [src]="banner" [alt]="'Banner-' + $index" />
+        </li>
+      }
+    </ul>
+    <ul class="banner-list" data-reverse="false">
+      @for (banner of bannerList; track banner) {
+        <li class="banner-list__item" [style.--position]="$index + 1">
+          <img [src]="banner" [alt]="'Banner-' + $index" />
+        </li>
+      }
+    </ul>
+    <ul class="banner-list" data-reverse="true">
+      @for (banner of bannerList; track banner) {
+        <li class="banner-list__item" [style.--position]="$index + 1">
+          <img [src]="banner" [alt]="'Banner-' + $index" />
+        </li>
+      }
+    </ul>
+  </div>
+</div>

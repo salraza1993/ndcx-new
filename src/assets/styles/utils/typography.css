@@ -1,0 +1,71 @@
+/* Fluid Responsive Typography */
+h1, .h1, .heading-1,
+h2, .h2, .heading-2,
+h3, .h3, .heading-3,
+h4, .h4, .heading-4,
+h5, .h5, .heading-5,
+h6, .h6, .heading-6 {
+  &:not(.no-inherit) {
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    color: inherit;
+  }
+}
+
+h1, .h1, .heading-1 {
+  /* Scales from 32px (mobile) to 48px (desktop) based on 16px base */
+  &:not(.no-inherit) {
+    font-size: clamp(2rem, calc(2vw + 1.5rem), 3rem);
+    letter-spacing: -0.02em;
+  }
+}
+
+h2, .h2, .heading-2 {
+  /* Scales from 28px (mobile) to 40px (desktop) */
+  &:not(.no-inherit) {
+    font-size: clamp(1.75rem, calc(1.5vw + 1.3rem), 2.5rem);
+    letter-spacing: -0.015em;
+  }
+}
+
+h3, .h3, .heading-3 {
+  /* Scales from 24px (mobile) to 32px (desktop) */
+  &:not(.no-inherit) {
+    font-size: clamp(1.5rem, calc(1.25vw + 1.15rem), 2rem);
+    letter-spacing: -0.01em;
+  }
+}
+
+h4, .h4, .heading-4 {
+  /* Scales from 20px (mobile) to 28px (desktop) */
+  &:not(.no-inherit) {
+    font-size: clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
+  }
+}
+
+h5, .h5, .heading-5 {
+  /* Scales from 18px (mobile) to 24px (desktop) */
+  &:not(.no-inherit) {
+    font-size: clamp(1.125rem, calc(0.75vw + 0.9rem), 1.5rem);
+  }
+}
+
+h6, .h6, .heading-6 {
+  /* Scales from 16px (mobile) to 20px (desktop) */
+  &:not(.no-inherit) {
+    font-size: clamp(1rem, calc(0.5vw + 0.8rem), 1.25rem);
+  }
+}
+
+
+p, .p, .paragraph {
+  margin: 0;
+  &:not(.no-inherit) {
+    line-height: 1.625;
+    &:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+    font-size: 1rem;
+  }
+}

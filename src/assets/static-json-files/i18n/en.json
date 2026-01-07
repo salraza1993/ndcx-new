@@ -1,0 +1,21 @@
+{
+  "direction": "ltr",
+  "menuBar": "Menu Bar",
+  "asideMenus": [
+    {"label": "Dashboard"},
+    {"label": "Search" },
+    {"label": "My Bookings"},
+    {"label": "Reports"},
+    {"label": "Offer & Promotions"}
+  ],
+  "flight": "Flight",
+  "hotel": "Hotel",
+  "totalSalesTitle": "Total Sales",
+  "totalBookings": "Total Bookings",
+  "totalCancelled": "Total Cancelled",
+  "totalOnHold": "Total On-hold",
+  "totalSuccess": "Total Success",
+  "myBookings": "My Bookings",
+  "rechargeWallet": "Recharge Wallet",
+  "walletActivities": "Wallet Activities"
+}

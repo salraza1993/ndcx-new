@@ -1,0 +1,21 @@
+{
+  "direction": "rtl",
+  "menuBar": "شريط القوائم",
+  "asideMenus": [
+    {"label": "لوحة القيادة"},
+    {"label": "يبحث"},
+    {"label": "حجوزاتي"},
+    {"label": "التقارير"},
+    {"label": "عروض"}
+  ],
+  "myBookings": "حجوزاتي",
+  "flight": "Flight",
+  "hotel": "Hotel",
+  "totalSalesTitle": "Total Sales",
+  "totalBookings": "Total Bookings",
+  "totalCancelled": "Total Cancelled",
+  "totalOnHold": "Total On-hold",
+  "totalSuccess": "Total Success",
+  "rechargeWallet": "إعادة شحن المحفظة",
+  "walletActivities": "أنشطة المحفظة"
+}

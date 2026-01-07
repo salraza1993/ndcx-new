@@ -1,0 +1,18 @@
+@import './variables/variables.css';
+@import './utils/typography.css';
+
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+
+body {
+  background-color: var(--body-bg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}

@@ -1,0 +1,53 @@
+:host {
+  --viewport-height: 100dvh;
+  --block-padding: 1.5rem;
+  --content-max-w: 75rem;
+  --content-max-h: calc(var(--viewport-height, 100vh) - var(--block-padding) * 2);
+  --form-block:
+  position: relative;
+  display: block;
+  min-height: var(--viewport-height, 100vh);
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--block-padding);
+
+  .auth-layout-host-content {
+    position: relative;
+    border-radius: calc(var(--x-border-radius-xl) + 1.5vw);
+    corner-shape: scoop;
+    z-index: 1;
+    width: auto;
+    max-height: 80vh;
+    max-height: 80dvh;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    grid-template-columns: calc(20rem + 5vw) 1fr;
+    overflow: clip;
+    box-shadow:
+      4px 4px 1px 0 rgba(255 255 255 / 0.25),
+      -2px -2px 1px 1px rgba(255 255 255 / 0.25);
+
+
+    .dynamic-content {
+      flex-grow: 1;
+      background-color: rgba(255 255 255 / 0.09);
+      backdrop-filter: blur(1rem) brightness(150%);
+      /* backdrop-filter: url(#glass-distortion);
+      -webkit-backdrop-filter: blur(1rem) brightness(200%); */
+      padding: 1rem;
+      color: white;
+    }
+
+    .ads-banner-container {
+      position: relative;
+      flex-shrink: 0;
+      aspect-ratio: 1 / 1;
+      background-color: red;
+      overflow: clip;
+      border-start-end-radius: inherit;
+      border-end-end-radius: inherit;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+:root {
+  --body-bg: light-dark(var(--x-surface-100), var(--x-surface-950));
+}
