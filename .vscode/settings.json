@@ -52,13 +52,21 @@
     "inputtext",
     "pmessage",
     "pmessages",
-    "pbutton"
+    "pbutton",
+    "iconfield",
+    "inputicon",
+    "SKYXHUB",
+    "skyxhub",
+    "xhub",
+    "skyx",
+    "skyhub"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

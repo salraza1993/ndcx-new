@@ -57,6 +57,7 @@
         animation: autoRun var(--animate-duration) linear infinite;
         animation-delay: calc((var(--animate-duration) / var(--item-quantity)) * (var(--position) - 1) - var(--animate-duration)) !important;;
         background-color: light-dark(var(--x-neutral-700), var(--x-neutral-800));
+
         img {
           width: 100%;
           height: 100%;

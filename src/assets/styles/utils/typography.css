@@ -62,10 +62,10 @@ h6, .h6, .heading-6 {
 p, .p, .paragraph {
   margin: 0;
   &:not(.no-inherit) {
-    line-height: 1.625;
+    line-height: 1.425;
     &:not(:last-child) {
       margin-block-end: 1rem;
     }
-    font-size: 1rem;
+    font-size: clamp(0.85rem, calc(0.5vw + 0.6rem), 1rem);
   }
 }

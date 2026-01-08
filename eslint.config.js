@@ -31,6 +31,27 @@ module.exports = defineConfig([
           style: "kebab-case",
         },
       ],
+      "@typescript-eslint/no-unused-vars": [
+        "error", {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_"
+        }
+      ],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "property",
+          "modifiers": ["private"],
+          "format": ["camelCase"],
+          "leadingUnderscore": "require"
+        },
+        {
+          "selector": "method",
+          "modifiers": ["private"],
+          "format": ["camelCase"],
+          "leadingUnderscore": "require"
+        }
+      ],
     },
   },
   {

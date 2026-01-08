@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthBackdrop } from "@auth/components/auth-backdrop/auth-backdrop";
-import { AuthAdBanners } from "@auth/components/auth-ad-banners/auth-ad-banners";
+import { AuthAdBanners } from '@auth/components/auth-ad-banners/auth-ad-banners';
+import { AuthBackdrop } from '@auth/components/auth-backdrop/auth-backdrop';
 
 @Component({
   selector: 'app-auth-layout',
@@ -9,6 +9,4 @@ import { AuthAdBanners } from "@auth/components/auth-ad-banners/auth-ad-banners"
   styleUrl: './auth-layout.css',
   host: { class: 'auth-layout-host' }
 })
-export class AuthLayout {
-
-}
+export class AuthLayout {}

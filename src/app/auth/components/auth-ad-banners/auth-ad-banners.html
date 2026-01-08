@@ -1,1 +1,5 @@
-<img src="/banners/2.png" alt="" />
+<swiper-container class="auth-ad-banners-swiper" autoplay="true" slides-per-view="1" loop="true" pagination="true">
+  @for (banner of banners(); track banner + 1) {
+    <swiper-slide><img src="/{{ banner }}" alt="Banner Image" /></swiper-slide>
+  }
+</swiper-container>

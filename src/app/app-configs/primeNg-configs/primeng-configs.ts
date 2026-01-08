@@ -39,13 +39,9 @@ export const PRIME_NG_CONFIGS = {
   theme: {
     preset: MyPreset,
     options: {
-      darkModeSelector: '[data-theme="dark"]',
-      ripple: true,
+      darkModeSelector: '.p-dark',
       prefix: 'x',
-      cssLayer: {
-        name: 'primeng',
-        order: 'styles, primeng, another-css-library'
-      }
+      order: 'global, primeng, another-css-library'
     }
-  },
+  }
 };

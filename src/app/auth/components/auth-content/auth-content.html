@@ -1,0 +1,21 @@
+<app-login-logo class="mb-4" />
+<div class="content">
+  <!-- Default title template -->
+  <ng-template #defaultTitle><h5 class="mb-2">Enter Title</h5></ng-template>
+
+  <!-- Default content template -->
+  <ng-template #defaultContent>Content will be projected</ng-template>
+
+  <!-- Render title: use projected or fallback to default -->
+  @if (!hideTitle()) {
+    <ng-container *ngTemplateOutlet="title() || defaultTitle"></ng-container>
+  }
+
+  <!-- Render content: use projected or fallback to default -->
+  @if (!hideContent()) {
+    <ng-container *ngTemplateOutlet="content() || defaultContent"></ng-container>
+  }
+</div>
+<!-- ref
+  https://github.com/joshuamorony/ng-template-outlet-example/blob/main/src/app/shared/ui/table.component.ts
+-->
