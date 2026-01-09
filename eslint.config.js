@@ -42,7 +42,7 @@ module.exports = defineConfig([
         {
           "selector": "property",
           "modifiers": ["private"],
-          "format": ["camelCase"],
+          "format": ["camelCase", "uppercase"],
           "leadingUnderscore": "require"
         },
         {

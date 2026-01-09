@@ -1,0 +1,28 @@
+{
+  "token": "",
+  "userInfo": {
+    "userId": "salraza",
+    "firstName": "Salman",
+    "lastName": "Raza",
+    "email": "salman.ahmad@skyxhub.com",
+    "roles": [
+      "admin"
+    ]
+  },
+  "appearance": "system",
+  "branding": {
+    "logo": [
+      "/client/logo-dark.svg",
+      "/client/logo-light.svg"
+    ],
+    "colors": [
+      "#0d47a1",
+      "#1976d2"
+    ]
+  },
+  "metaData": {
+    "appName": "NDCX",
+    "appDescription": "NDCX Application",
+    "appKeywords": "NDCX, SkyXHub, Application"
+  }
+}

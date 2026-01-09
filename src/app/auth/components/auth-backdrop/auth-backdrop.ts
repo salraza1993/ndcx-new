@@ -1,7 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { environment } from '@env/environment.development';
-import { firstValueFrom } from 'rxjs';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-auth-backdrop',
@@ -77,11 +74,6 @@ export class AuthBackdrop {
     'banners/10.png'
   ];
   protected bannerList = this.originalList;
-  private readonly _http = inject(HttpClient);
-  private async _fetchBanners() {
-    const result = await firstValueFrom(this._http.get(environment.GET_BANNERS_API));
-    return result;
-  }
   protected bannersArray(reverse = false) {
     return reverse ? [...this.bannerList].reverse() : this.bannerList;
   }

@@ -59,7 +59,9 @@
     "skyxhub",
     "xhub",
     "skyx",
-    "skyhub"
+    "skyhub",
+    "APIOUTAGENCY",
+    "salraza"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard, guestGuard } from '@guards/auth/auth-guard';
 import { PageLayoutEnum } from '@layouts/enums/PageLayoutEnum';
 import { setLayout } from '@layouts/layout-resolver';
 
@@ -11,19 +12,21 @@ export const AppRoutes: Routes = [
   },
   {
     path: '',
+    canActivate: [authGuard],
     loadChildren: () =>
-      import('@app/core/routes/authorized-routes').then(dashboard => dashboard.AUTHORIZED_ROUTES),
+      import('./authorized-routes').then(authorized => authorized.AUTHORIZED_ROUTES),
     resolve: { layout: setLayout(PageLayoutEnum.Authorized) }
   },
   {
     path: '',
+    canActivate: [guestGuard],
     resolve: { layout: setLayout(PageLayoutEnum.UnAuthorized) },
-    loadChildren: () => import('@core/routes/auth-routes').then(auth => auth.AUTH_ROUTES)
+    loadChildren: () => import('./auth-routes').then(auth => auth.AUTH_ROUTES)
   },
   // Error route
   {
     path: '**',
-    loadChildren: () => import('@core/routes/error.route').then(error => error.ERROR_ROUTES),
+    loadChildren: () => import('./error.route').then(error => error.ERROR_ROUTES),
     resolve: { layout: setLayout(PageLayoutEnum.Error) }
   }
 ];

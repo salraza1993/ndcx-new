@@ -30,8 +30,10 @@
     aspect-ratio: 16 / 9;
     display: flex;
     overflow: clip;
-    /* border: 4px solid transparent; */
     box-shadow: 0 0 0 0.35rem rgba(255 255 255 / 0.1);
+    @media screen and (height < 600px) {
+      min-height: 30rem;
+    }
 
 
     .dynamic-content {

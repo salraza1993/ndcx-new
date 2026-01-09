@@ -1,0 +1,6 @@
+:host {
+
+  ::ng-deep .p-iconfield.p-invalid {
+    --x-iconfield-icon-color: var(--x-red-500);
+  }
+}

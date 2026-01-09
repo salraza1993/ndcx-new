@@ -1,4 +1,5 @@
+const baseUrl = 'http://10.1.0.5:2002';
 export const environment = {
-  GET_BANNERS_API: "http://10.1.0.5/base/GetBannerDetails",
+  AUTH_API: `${baseUrl}/token`,
   production: true
 };

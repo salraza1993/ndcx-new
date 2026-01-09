@@ -1,6 +1,7 @@
+@let userName = userInfo().firstName + ' ' + userInfo().lastName;
 <app-auth-content>
   <ng-template #title>
-    <h5 class="mb-2">Welcome Back, Salman! 👋</h5>
+    <h5 class="mb-2">Welcome Back, {{ userName }}! 👋</h5>
   </ng-template>
 
   <ng-template #content>
