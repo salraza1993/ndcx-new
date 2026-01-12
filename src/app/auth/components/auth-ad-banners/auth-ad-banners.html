@@ -1,5 +1,10 @@
-<swiper-container class="auth-ad-banners-swiper" autoplay="true" slides-per-view="1" loop="true" pagination="true">
-  @for (banner of banners(); track banner + 1) {
-    <swiper-slide><img src="/{{ banner }}" alt="Banner Image" /></swiper-slide>
+<swiper-container class="auth-ad-banners-swiper" autoplay="false" slides-per-view="1" loop="true" pagination="true">
+  @for (banner of banners(); track banner.id) {
+    <swiper-slide>
+      <picture>
+        <source srcset="/{{ banner.mobile }}" media="(max-width: 1100px)" />
+        <img src="/{{ banner.desktop }}" alt="Banner Image" />
+      </picture>
+    </swiper-slide>
   }
 </swiper-container>

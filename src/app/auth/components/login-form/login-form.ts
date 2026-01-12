@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component, effect, inject, OnInit, signal } fr
 import { FormsModule } from '@angular/forms';
 import { Field, form, required, submit } from '@angular/forms/signals';
 import { Router, RouterLink } from '@angular/router';
+import { AutoFocusModule } from 'primeng/autofocus';
 import { ButtonModule } from 'primeng/button';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
@@ -15,6 +16,7 @@ import { AuthServices, SignInCredentialsType } from '../../services/auth-service
 @Component({
   selector: 'app-login-form',
   imports: [
+    AutoFocusModule,
     InputTextModule,
     FormsModule,
     PasswordModule,

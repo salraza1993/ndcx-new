@@ -61,7 +61,8 @@
     "skyx",
     "skyhub",
     "APIOUTAGENCY",
-    "salraza"
+    "salraza",
+    "inputotp"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

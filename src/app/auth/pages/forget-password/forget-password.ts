@@ -14,7 +14,12 @@ import { InputTextModule } from 'primeng/inputtext';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class:
-      'login-page-host relative flex flex-col justify-center gap-3 h-full max-w-[var(--block-max-width)] mx-auto'
+      'login-page-host relative flex flex-col justify-center gap-3 h-full max-w-[var(--block-max-width)] mx-auto',
+    '[animate.enter]': 'animateOnEnter',
+    '[style.--animation-delay]': '"500ms"'
   }
 })
-export class ForgetPassword {}
+export class ForgetPassword {
+  protected animateOnEnter = 'slide-in';
+  protected animateOnExit = 'slide-out';
+}

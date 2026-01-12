@@ -1,0 +1,44 @@
+/* animations */
+:root {
+  --animation-duration: 500ms;
+  --animation-delay: 0ms;
+}
+.slide-in {
+  animation-name: slideIn;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.slide-out {
+  animation-name: slideOut;
+  animation-duration: var(--animation-duration);
+  animation-delay: var(--animation-delay);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Step 1: Declare the Keyframes */
+@keyframes slideIn {
+  /* The starting point (0% or 'from') is off-screen to the left */
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  /* The ending point (100% or 'to') is the element's original position */
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  /* The starting point (0% or 'from') is off-screen to the left */
+  from {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  /* The ending point (100% or 'to') is the element's original position */
+  to {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}

@@ -10,10 +10,13 @@ import { LoginForm } from '@app/auth/components/login-form/login-form';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class:
-      'login-page-host relative flex flex-col justify-center gap-[var(--block-gap)] h-full max-w-[var(--block-max-width)] mx-auto'
+      'login-page-host relative flex flex-col justify-center gap-[var(--block-gap)] h-full max-w-[var(--block-max-width)] mx-auto',
+    '[animate.enter]': 'animateOnEnter'
   }
 })
 export class Login {
+  protected animateOnEnter = 'slide-in';
+  protected animateOnExit = 'slide-out';
   protected userInfo = signal({
     username: 'testUser',
     firstName: 'User',

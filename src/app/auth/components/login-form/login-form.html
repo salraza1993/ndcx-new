@@ -4,7 +4,18 @@
   <div class="grid gap-1">
     <p-iconfield [class]="isUsernameInvalid">
       <p-inputicon class="pi pi-user" />
-      <input type="text" id="username" autocomplete="on" pInputText size="small" fluid placeholder="Enter your username" [field]="loginForm.username" [ngClass]="isUsernameInvalid" />
+      <input
+        type="text"
+        [pAutoFocus]="true"
+        id="username"
+        autocomplete="on"
+        pInputText
+        size="small"
+        fluid
+        placeholder="Enter your username"
+        [field]="loginForm.username"
+        [ngClass]="isUsernameInvalid"
+      />
     </p-iconfield>
     @if (loginForm.username().touched() && loginForm.username().invalid()) {
       <div class="error-list">
@@ -28,9 +39,10 @@
     }
   </div>
   <a routerLink="/forget-password" class="ms-auto text-sm">Forgot Password?</a>
-  <button pButton size="large" severity="secondary" [loading]="loading()" [disabled]="loginForm().invalid()" type="submit">
+  @let isInValid = loginForm().invalid();
+  <button pButton size="large" [severity]="isInValid ? 'secondary' : 'primary'" [loading]="loading()" [disabled]="loginForm().invalid()" type="submit">
     <span pButtonLabel>Submit</span>
-    <i class="pi pi-send" pButtonIcon></i>
+    <i class="pi pi-sign-in" pButtonIcon></i>
   </button>
   @if (errorMessage()) {
     <p-message size="small" severity="error">{{ errorMessage() }}</p-message>

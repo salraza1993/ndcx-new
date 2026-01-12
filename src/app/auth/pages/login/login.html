@@ -1,11 +1,12 @@
 @let userName = userInfo().firstName + ' ' + userInfo().lastName;
 <app-auth-content>
   <ng-template #title>
-    <h5 class="mb-2">Welcome Back, {{ userName }}! 👋</h5>
+    <h6 class="no-inehrit text-md text-shadow-lg/15 mb-2">Welcome Back, {{ userName }}! 👋</h6>
   </ng-template>
-
   <ng-template #content>
-    <p>Sign in to continue managing bookings and growing your business.</p>
+    <p class="no-inherit text-sm leading-1.15 block">Sign in to continue managing bookings and growing your business.</p>
   </ng-template>
 </app-auth-content>
+
 <app-login-form />
+<!-- <app-otp-form /> -->
