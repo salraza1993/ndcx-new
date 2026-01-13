@@ -1,65 +1,63 @@
 // @ts-check
-const eslint = require("@eslint/js");
-const { defineConfig } = require("eslint/config");
-const tseslint = require("typescript-eslint");
-const angular = require("angular-eslint");
+const eslint = require('@eslint/js');
+const { defineConfig } = require('eslint/config');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
 
 module.exports = defineConfig([
   {
-    files: ["**/*.ts"],
+    files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
       tseslint.configs.recommended,
       tseslint.configs.stylistic,
-      angular.configs.tsRecommended,
+      angular.configs.tsRecommended
     ],
     processor: angular.processInlineTemplates,
     rules: {
-      "@angular-eslint/directive-selector": [
-        "error",
+      '@angular-eslint/directive-selector': [
+        'error',
         {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
-        },
-      ],
-      "@angular-eslint/component-selector": [
-        "error",
-        {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
-        },
-      ],
-      "@typescript-eslint/no-unused-vars": [
-        "error", {
-          argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_"
+          type: 'attribute',
+          prefix: 'app',
+          style: 'camelCase'
         }
       ],
-      "@typescript-eslint/naming-convention": [
-        "error",
+      '@angular-eslint/component-selector': [
+        'error',
         {
-          "selector": "property",
-          "modifiers": ["private"],
-          "format": ["camelCase", "uppercase"],
-          "leadingUnderscore": "require"
-        },
-        {
-          "selector": "method",
-          "modifiers": ["private"],
-          "format": ["camelCase"],
-          "leadingUnderscore": "require"
+          type: 'element',
+          prefix: 'app',
+          style: 'kebab-case'
         }
       ],
-    },
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_'
+        }
+      ],
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'property',
+          modifiers: ['private'],
+          format: ['camelCase', 'UPPER_CASE'],
+          leadingUnderscore: 'require'
+        },
+        {
+          selector: 'method',
+          modifiers: ['private'],
+          format: ['camelCase'],
+          leadingUnderscore: 'require'
+        }
+      ]
+    }
   },
   {
-    files: ["**/*.html"],
-    extends: [
-      angular.configs.templateRecommended,
-      angular.configs.templateAccessibility,
-    ],
-    rules: {},
+    files: ['**/*.html'],
+    extends: [angular.configs.templateRecommended, angular.configs.templateAccessibility],
+    rules: {}
   }
 ]);

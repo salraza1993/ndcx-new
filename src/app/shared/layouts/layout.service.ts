@@ -5,7 +5,7 @@ import { LayoutConfig, PageLayoutEnum } from './enums/PageLayoutEnum';
   providedIn: 'root'
 })
 export class LayoutService {
-  private readonly currentLayout = signal<LayoutConfig>({
+  private readonly _currentLayout = signal<LayoutConfig>({
     type: PageLayoutEnum.UnAuthorized,
     showHeader: true,
     showSidebar: true,
@@ -13,21 +13,21 @@ export class LayoutService {
     fullScreen: false
   });
 
-  readonly layout = this.currentLayout.asReadonly();
-  readonly layoutType = computed(() => this.currentLayout().type);
-  readonly isAuthorized = computed(() => this.currentLayout().type === PageLayoutEnum.Authorized);
+  readonly layout = this._currentLayout.asReadonly();
+  readonly layoutType = computed(() => this._currentLayout().type);
+  readonly isAuthorized = computed(() => this._currentLayout().type === PageLayoutEnum.Authorized);
   readonly isUnAuthorized = computed(
-    () => this.currentLayout().type === PageLayoutEnum.UnAuthorized
+    () => this._currentLayout().type === PageLayoutEnum.UnAuthorized
   );
-  readonly isError = computed(() => this.currentLayout().type === PageLayoutEnum.Error);
-  readonly showSidebar = computed(() => this.currentLayout().showSidebar ?? false);
-  readonly showHeader = computed(() => this.currentLayout().showHeader ?? false);
-  readonly showFooter = computed(() => this.currentLayout().showFooter ?? false);
-  readonly fullScreen = computed(() => this.currentLayout().fullScreen ?? false);
+  readonly isError = computed(() => this._currentLayout().type === PageLayoutEnum.Error);
+  readonly showSidebar = computed(() => this._currentLayout().showSidebar ?? false);
+  readonly showHeader = computed(() => this._currentLayout().showHeader ?? false);
+  readonly showFooter = computed(() => this._currentLayout().showFooter ?? false);
+  readonly fullScreen = computed(() => this._currentLayout().fullScreen ?? false);
 
   setLayout(config: LayoutConfig | PageLayoutEnum): void {
     if (typeof config === 'string') {
-      this.currentLayout.update(current => {
+      this._currentLayout.update(current => {
         const newLayout = {
           ...current,
           type: config,
@@ -36,7 +36,7 @@ export class LayoutService {
         return newLayout;
       });
     } else {
-      this.currentLayout.set(config);
+      this._currentLayout.set(config);
     }
   }
 
@@ -77,6 +77,6 @@ export class LayoutService {
   }
 
   updateLayoutConfig(partial: Partial<LayoutConfig>): void {
-    this.currentLayout.update(current => ({ ...current, ...partial }));
+    this._currentLayout.update(current => ({ ...current, ...partial }));
   }
 }

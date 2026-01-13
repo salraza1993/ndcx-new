@@ -1,0 +1,7 @@
+:host {
+  --aside-width: calc(250px + 1vw);
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: var(--aside-width) 1fr;
+}

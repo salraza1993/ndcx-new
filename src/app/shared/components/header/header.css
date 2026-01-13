@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  position: sticky;
+  inset-block-start: 0;
+  width: 100%;
+  background-color: light-dark(var(--x-surface-300), var(--x-surface-800));
+  z-index: 10;
+  height: var(--main-header-height);
+}

@@ -11,7 +11,8 @@ export class ClientConfigService {
 
   async fetchClientConfig(): Promise<void> {
     const response = await firstValueFrom(
-      this._http.get<{ [key: string]: any }>(this._CLIENT_CONFIG_KEY)
+      // eslint-disable-next-line
+      this._http.get<any>(this._CLIENT_CONFIG_KEY)
     );
     // Handle the response as needed
     console.log('Fetched Client Config:', response);

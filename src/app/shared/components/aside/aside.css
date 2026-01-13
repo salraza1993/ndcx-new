@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+  max-width: var(--aside-width);
+  background-color: light-dark(var(--x-surface-800), var(--x-surface-950));
+  color: white;
+  .aside-wrapper {
+    position: sticky;
+    inset-block-start: 0;
+    border: 1px solid;
+
+    .aside-header {
+      margin-bottom: 2rem;
+      height: var(--main-header-height);
+      background-color: blue;
+    }
+  }
+}

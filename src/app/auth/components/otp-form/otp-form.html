@@ -1,2 +1,5 @@
-<p-inputotp [(ngModel)]="otpValue" />
-<button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
+<p-inputotp styleClass="custom-otp" [(ngModel)]="otpValue" [integerOnly]="true" [length]="5" />
+<button pButton severity="secondary" fluid type="submit" size="large">
+  <span pButtonLabel>Verify OTP</span>
+  <span pi-verified><i class="pi pi-verified"></i></span>
+</button>

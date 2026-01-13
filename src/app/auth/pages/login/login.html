@@ -1,12 +1,36 @@
 @let userName = userInfo().firstName + ' ' + userInfo().lastName;
-<app-auth-content>
-  <ng-template #title>
-    <h6 class="no-inehrit text-md text-shadow-lg/15 mb-2">Welcome Back, {{ userName }}! 👋</h6>
-  </ng-template>
-  <ng-template #content>
-    <p class="no-inherit text-sm leading-1.15 block">Sign in to continue managing bookings and growing your business.</p>
-  </ng-template>
-</app-auth-content>
 
-<app-login-form />
-<!-- <app-otp-form /> -->
+@if (showOtpForm()) {
+  <button
+    pButton
+    (click)="showOtpForm.set(false)"
+    severity="secondary"
+    size="small"
+    icon="pi pi-arrow-left"
+    style="max-width: max-content"
+    type="button"
+  >
+    Back to Login
+  </button>
+  <app-auth-content>
+    <ng-template #title>
+      <h6 class="no-inehrit text-md text-shadow-lg/15 mb-2">Let's make sure it's you 👋</h6>
+    </ng-template>
+    <ng-template #content>
+      <p class="no-inherit text-sm leading-1.15 block">
+        Please enter the one-time password sent to your registered email address.
+      </p>
+    </ng-template>
+  </app-auth-content>
+  <app-otp-form />
+} @else {
+  <app-auth-content>
+    <ng-template #title>
+      <h6 class="no-inehrit text-md text-shadow-lg/15 mb-2">Welcome Back, {{ userName }}! 👋</h6>
+    </ng-template>
+    <ng-template #content>
+      <p class="no-inherit text-sm leading-1.15 block">Sign in to continue managing bookings and growing your business.</p>
+    </ng-template>
+  </app-auth-content>
+  <app-login-form />
+}

@@ -19,6 +19,7 @@
 
   @media screen and (width < 768px) {
     --block-padding: 3vw;
+    --client-logo-size: calc(5rem + 5vw);
   }
 
   .auth-content-wrapper {

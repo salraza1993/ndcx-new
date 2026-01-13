@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputOtpModule } from 'primeng/inputotp';
@@ -7,11 +7,14 @@ import { InputOtpModule } from 'primeng/inputotp';
   selector: 'app-otp-form',
   imports: [InputOtpModule, FormsModule, ButtonModule],
   templateUrl: './otp-form.html',
-  styleUrl: './otp-form.css'
+  styleUrl: './otp-form.css',
+  host: {
+    class: 'otp-form-host flex flex-col gap-4'
+  }
 })
 export class OtpForm {
-  otpValue: any;
-
+  otpValue = signal<number | null>(null);
+  // eslint-disable-next-line
   onSubmit(form: any) {
     form.resetForm();
   }

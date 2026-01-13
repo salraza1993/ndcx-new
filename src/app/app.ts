@@ -9,7 +9,14 @@ import { LayoutService } from '@layouts/layout.service';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, AuthLayout, DefaultLayout, ErrorLayout],
-  templateUrl: './app.html'
+  templateUrl: './app.html',
+  styles: `
+    :host {
+      display: block;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+  `
 })
 export class App implements OnInit {
   protected readonly layoutService = inject(LayoutService);

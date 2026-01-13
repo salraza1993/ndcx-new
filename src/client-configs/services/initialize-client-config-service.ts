@@ -25,7 +25,7 @@ export class InitializeClientConfigService {
         const parsedConfig = JSON.parse(existingConfig) as InitialConfigModel;
 
         // Validate the parsed config has the required structure
-        if (this.isValidConfig(parsedConfig)) {
+        if (this._isValidConfig(parsedConfig)) {
           this._initialConfig.set(parsedConfig);
           return;
         }
@@ -49,7 +49,7 @@ export class InitializeClientConfigService {
     return;
   }
 
-  private isValidConfig(config: unknown): config is InitialConfigModel {
+  private _isValidConfig(config: unknown): config is InitialConfigModel {
     // Type guard to check if config matches InitialConfigModel structure
     if (!config || typeof config !== 'object') {
       return false;

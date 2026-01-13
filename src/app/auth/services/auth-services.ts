@@ -22,12 +22,12 @@ export class AuthServices {
   private readonly _storage = inject(LocalStorageService);
   private readonly _http = inject(HttpClient);
   private readonly _router = inject(Router);
-  private readonly _isAuthenticated = signal<boolean>(this.checkAuthStatus());
+  private readonly _isAuthenticated = signal<boolean>(this._checkAuthStatus());
 
   isAuthenticated = computed(() => this._isAuthenticated());
 
   // Check if user has valid token on initialization
-  private checkAuthStatus(): boolean {
+  private _checkAuthStatus(): boolean {
     const token = this.getToken();
     return !!token;
   }
