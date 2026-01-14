@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-login-logo',
   imports: [],
   template: `<img
-    src="/client/logo-dark.svg"
+    src="/client/logo-light.svg"
     style="width: var(--client-logo-size)"
     alt="Logo Dark"
   />`,

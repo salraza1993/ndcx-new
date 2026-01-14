@@ -1,9 +1,14 @@
 :host {
   display: flex;
+  align-items: center;
   position: sticky;
   inset-block-start: 0;
   width: 100%;
   background-color: light-dark(var(--x-surface-300), var(--x-surface-800));
+  box-shadow: inset 0 -1px 0 0 light-dark(var(--x-surface-300), var(--x-surface-600));
   z-index: 10;
   height: var(--main-header-height);
+  padding-inline: calc(var(--main-header-padding) / 1.25);
+  padding-block: calc(var(--main-header-padding) / 2);
+  gap: calc(var(--main-header-padding) / 1);
 }

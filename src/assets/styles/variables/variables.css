@@ -1,4 +1,5 @@
 :root {
-  --body-bg: light-dark(var(--x-surface-100), var(--x-surface-800));
-  --main-header-height: 3.75rem; /* 60px */
+  --body-bg: light-dark(var(--x-surface-100), var(--x-surface-700));
+  --main-header-height: 4rem; /* 64px */
+  --main-header-padding: calc(var(--main-header-height) / 4);
 }

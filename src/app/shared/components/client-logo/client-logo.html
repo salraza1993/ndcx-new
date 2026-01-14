@@ -1,0 +1,14 @@
+@let logoType = type() === 'normal' ? '' : `-${type()}`;
+<picture>
+  @if (variant() === 'light') {
+    <img src="/client/logo{{ logoType }}-light.svg" alt="Client Logo" />
+  } @else if (variant() === 'dark') {
+    <img src="/client/logo{{ logoType }}-dark.svg" alt="Client Logo" />
+  } @else {
+    <source srcset="/client/logo{{ logoType }}-dark.svg" media="(prefers-color-scheme: light)" />
+    <source srcset="/client/logo{{ logoType }}-light.svg" media="(prefers-color-scheme: dark)" />
+    <img src="/client/logo{{ logoType }}-dark.svg" alt="Client Logo" />
+  }
+  <!-- <source srcset="/client/logo-full-2-light.svg" media="(prefers-color-scheme: dark)" />
+  <img src="/client/logo-full-2-dark.svg" alt="Client Logo" /> -->
+</picture>

@@ -9,7 +9,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ndcx-new": {
+    "tap": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -69,10 +69,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "ndcx-new:build:production"
+              "buildTarget": "tap:build:production"
             },
             "development": {
-              "buildTarget": "ndcx-new:build:development"
+              "buildTarget": "tap:build:development"
             }
           },
           "defaultConfiguration": "development"

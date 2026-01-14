@@ -1,0 +1,5 @@
+:host {
+  img {
+    filter: drop-shadow(2px 2px 1px hsl(from var(--x-surface-900) h s l / 0.35));
+  }
+}

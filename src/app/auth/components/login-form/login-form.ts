@@ -52,7 +52,7 @@ export class LoginForm implements OnInit {
   protected errorMessage = signal<string | null>(null);
 
   private _loginEffect = effect(() => {
-    const isAuth = this._authService.isAuthenticated();
+    const _isAuth = this._authService.isAuthenticated();
   });
 
   isInvalid(fieldName: boolean): boolean {
@@ -73,6 +73,8 @@ export class LoginForm implements OnInit {
         if (error instanceof HttpErrorResponse) {
           if (error.status === 401) {
             this.errorMessage.set('Invalid username or password.');
+          } else if (error.status === 500) {
+            this.errorMessage.set('Server error 500. Please try again later.');
           } else {
             this.errorMessage.set('An error occurred. Please try again later.');
           }
