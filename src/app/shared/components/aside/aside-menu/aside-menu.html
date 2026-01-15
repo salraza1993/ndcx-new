@@ -1,0 +1,11 @@
+@for (item of asideMenu(); track item.label) {
+  <a
+    [routerLink]="item.route"
+    class="aside-menu-item flex items-center gap-3 ps-2 pe-4 py-1.5 rounded-md {{ item.class }}"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <span class="icon text-lg"><i class="{{ item.icon }}"></i></span>
+    <span>{{ item.label }}</span>
+  </a>
+}

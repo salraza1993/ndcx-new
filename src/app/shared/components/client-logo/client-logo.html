@@ -4,6 +4,10 @@
     <img src="/client/logo{{ logoType }}-light.svg" alt="Client Logo" />
   } @else if (variant() === 'dark') {
     <img src="/client/logo{{ logoType }}-dark.svg" alt="Client Logo" />
+  } @else if (variant() === 'color') {
+    <source srcset="/client/logo{{ logoType }}-color.svg" media="(prefers-color-scheme: light)" />
+    <source srcset="/client/logo{{ logoType }}-color-dark.svg" media="(prefers-color-scheme: dark)" />
+    <img src="/client/logo{{ logoType }}-color.svg" alt="Client Logo" />
   } @else {
     <source srcset="/client/logo{{ logoType }}-dark.svg" media="(prefers-color-scheme: light)" />
     <source srcset="/client/logo{{ logoType }}-light.svg" media="(prefers-color-scheme: dark)" />

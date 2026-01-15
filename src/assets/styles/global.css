@@ -1,117 +1,19 @@
+/* Define CSS cascade layers order for proper specificity control */
+@layer base, global, primeng, primeng-overrides;
+
 @import './variables/variables.css';
 @import './utils/typography.css';
 @import './utils/animations.css';
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
 @import 'primeicons/primeicons.css';
+@import './utils/base.css' layer(base);
 
-@media (prefers-reduced-motion: no-preference) {
-  ::view-transition-old(root) {
-    animation: move-out var(--animation-duration) ease-in;
-    animation-fill-mode: forwards;
-  }
+/* Import custom PrimeNG overrides in the primeng-overrides layer */
+@import './primeng/primeng.css' layer(primeng-overrides);
 
-  ::view-transition-new(root) {
-    animation: move-in var(--animation-duration) ease-in;
-  }
 
-  @keyframes move-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
-  }
-
-  @keyframes move-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes circle-in {
-    from { clip-path: circle(0% at 50% 50%); }
-    to { clip-path: circle(100% at 50% 50%); }
-  }
-  @keyframes circle-out {
-    from { clip-path: circle(100% at 50% 50%); }
-    to { clip-path: circle(0% at 50% 50%); }
-  }
+@layer global {
+  /* Global styles go here */
 }
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  font-variant: normal;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--body-bg);
-}
-
-img {
-  max-width: 100%;
-  display: inline-block;
-}
-.p-inputtext {
-  font-size: 2rem;
-}
-/* Initial Pre-loader styles */
-.app-pre-loader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: light-dark(var(--x-neutral-700), var(--x-neutral-800));
-  color-scheme: light dark;
-  isolation: isolate;
-  color: var(--x-neutral-200);
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: inherit;
-    background-image: url('/images/bg-pattern-light.svg');
-    background-blend-mode: soft-light;
-    background-size: calc(200px + 10vw) auto;
-    opacity: 0.25;
-    z-index: -1;
-  }
-
-  .content {
-    position: absolute;
-    max-width: max-content;
-    display: grid;
-    place-items: center;
-    gap: 1rem;
-    font-style: italic;
-    .spinner {
-      width: 60px;
-      height: 60px;
-      border: 4px solid light-dark(var(--x-neutral-800), var(--x-neutral-700));
-      border-top-color: inherit;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-  }
-  .powered-by {
-    position: absolute;
-    inset-block-end: calc(1rem + 1vh);
-    opacity: 0.75;
-    display: grid;
-    text-align: center;
-    a:hover {
-      text-decoration: underline;
-    }
-  }
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
 

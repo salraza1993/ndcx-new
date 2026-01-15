@@ -1,9 +1,28 @@
 <div class="aside-wrapper">
   <div class="aside-header flex items-center gap-4">
-    <div class="aside-menu-toggler grid place-items-center rounded cursor-pointer shrink-0">
-      <i class="fa-solid fa-ellipsis-h text-xl pointer-events-none"></i>
+    <div
+      (click)="toggleCollapse()"
+      (keydown.enter)="toggleCollapse()"
+      (keydown.space)="toggleCollapse()"
+      tabindex="0"
+      role="button"
+      class="aside-menu-toggler grid place-items-center rounded cursor-pointer shrink-0"
+    >
+      <i class="fa-solid fa-ellipsis-{{ isCollapsed() ? 'v' : 'h' }} text-xl pointer-events-none"></i>
     </div>
-    <app-client-logo type="full" />
+    <app-client-logo variant="color" type="full" />
   </div>
-  <p>aside works!</p>
+  <app-aside-menu />
+  @if (!isCollapsed()) {
+    <div class="flex justify-between items-center text-xs px-4 pb-3 overflow-clip whitespace-nowrap">
+      <small>
+        Powered By:
+        <strong>SkyXHub Technology</strong>
+      </small>
+      <small>
+        V:
+        <strong>1.0.0</strong>
+      </small>
+    </div>
+  }
 </div>

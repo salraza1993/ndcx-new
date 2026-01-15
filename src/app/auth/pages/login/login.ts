@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { AuthContent } from '@app/auth/components/auth-content/auth-content';
 import { LoginForm } from '@app/auth/components/login-form/login-form';
 import { OtpForm } from '@app/auth/components/otp-form/otp-form';
 import { ButtonModule } from 'primeng/button';
+import { ClientConfigService } from '../../../../client-configs/services/client-config-service';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +18,9 @@ import { ButtonModule } from 'primeng/button';
   }
 })
 export class Login {
+  private _clientConfigService = inject(ClientConfigService);
+  protected userInfo = this._clientConfigService.getUserInfo();
   protected animateOnEnter = 'slide-in';
   protected animateOnExit = 'slide-out';
   protected showOtpForm = signal(false);
-  protected userInfo = signal({
-    username: 'testUser',
-    firstName: 'User',
-    lastName: 'Name'
-  });
 }

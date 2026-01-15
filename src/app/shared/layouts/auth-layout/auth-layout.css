@@ -92,7 +92,8 @@
         box-shadow: none;
 
         .ads-banner-container {
-          border-radius: calc(var(--x-border-radius-xl) + 0.5vw);
+          border-radius: calc(var(--x-border-radius-xl) + 1vw);
+          corner-shape: scoop;
         }
         .dynamic-content {
           backdrop-filter: none;

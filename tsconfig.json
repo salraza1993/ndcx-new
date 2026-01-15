@@ -21,6 +21,8 @@
       "@auth/*": ["./src/app/auth/*"],
       "@pages/*": ["./src/app/pages/*"],
       "@core/*": ["./src/app/core/*"],
+      "@pipes/*": ["./src/app/core/pipes/*"],
+      "@directive/*": ["./src/app/core/directives/*"],
       "@features/*": ["./src/app/core/features/*"],
       "@utils/*": ["./src/app/core/utils/*"],
       "@guards/*": ["./src/app/core/guards/*"],

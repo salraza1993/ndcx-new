@@ -1,3 +1,6 @@
 :host {
   /* --x-button-padding-x: 0.5rem; */
+  ::ng-deep .p-splitbutton-button.p-button {
+    padding-inline-start: 0.5rem;
+  }
 }

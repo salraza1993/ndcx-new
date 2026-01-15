@@ -41,7 +41,10 @@ export const PRIME_NG_CONFIGS = {
     options: {
       // darkModeSelector: '.p-dark',
       prefix: 'x',
-      order: 'global, primeng, another-css-library'
+      cssLayer: {
+        name: 'primeng',
+        order: 'base, global, primeng, primeng-overrides, theme, components, utilities'
+      }
     }
   }
 };

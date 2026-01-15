@@ -1,0 +1,36 @@
+/**
+ * PrimeNG Custom Overrides
+ *
+ * This file is imported in the 'primeng-overrides' layer via global.css
+ * Use this for customizations that need to override PrimeNG's default styles.
+ *
+ * Best Practices:
+ * - Prefer using design tokens in primeng-configs.ts over CSS overrides
+ * - Only use this file when design tokens are insufficient
+ * - Use CSS custom properties (--x-*) for maintainability
+ * - Keep selectors specific but not overly complex
+ */
+
+/* :root {} */
+
+.p-inputtext {
+  --x-inputtext-shadow: none;
+  &:is(.p-filled) {
+    font-weight: 700;
+  }
+}
+
+.p-iconfield {
+  &:has(.p-inputtext.p-filled.p-valid) {
+    .p-inputicon {
+      --x-iconfield-icon-color: light-dark(var(--x-neutral-600), var(--x-neutral-400));
+    }
+  }
+}
+
+/* Add your custom PrimeNG component overrides here */
+/* Example:
+.p-button {
+  border-radius: var(--x-border-radius);
+}
+*/

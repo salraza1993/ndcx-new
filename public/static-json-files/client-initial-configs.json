@@ -9,6 +9,10 @@
       "admin"
     ]
   },
+  "asideBar": {
+    "isCollapsed": false,
+    "isSticky": true
+  },
   "appearance": "system",
   "branding": {
     "logo": [

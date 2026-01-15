@@ -1,6 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { InitializeClientConfigService } from '@client/services/initialize-client-config-service';
+import { ClientConfigService } from '@client/services/client-config-service';
 import { AuthLayout } from '@layouts/auth-layout/auth-layout';
 import { DefaultLayout } from '@layouts/default-layout/default-layout';
 import { ErrorLayout } from '@layouts/error-layout/error-layout';
@@ -20,13 +21,13 @@ import { LayoutService } from '@layouts/layout.service';
 })
 export class App implements OnInit {
   protected readonly layoutService = inject(LayoutService);
-  private readonly _initialClientConfigService = inject(InitializeClientConfigService);
+  private readonly _clientConfigService = inject(ClientConfigService);
 
   async ngOnInit(): Promise<void> {
     try {
-      await this._initialClientConfigService.initConfig();
-    } catch (error) {
-      console.error('Error loading initial config:', error);
+      await this._clientConfigService.initConfig();
+    } catch (error: HttpErrorResponse | unknown) {
+      console.error('Error loading initial config:', error as HttpErrorResponse);
     }
   }
 }

@@ -1,0 +1,38 @@
+:host {
+  --menu-base: var(--x-surface-500);
+  --menu-item-bg: light-dark(hsl(from var(--menu-base) h s l / .075), hsl(from var(--menu-base) h s l / .35));
+  position: relative;
+  max-width: var(--aside-width);
+  display: flex;
+  flex-grow: 1;
+  min-height: 50vh;
+  padding-inline: calc(var(--aside-padding) * 1.5);
+  padding-block: calc(var(--aside-padding) * 1.5);
+  /* overflow-y: scroll; */
+  scrollbar-width: thin;
+
+  & .aside-menu-item {
+    background-color: var(--menu-item-bg);
+    transition: background-color 0.3s ease;
+    overflow: clip;
+    white-space: nowrap;
+
+    &:not(.active):is(:hover, :focus) {
+      background-color: light-dark(var(--x-surface-300), var(--x-surface-500));
+    }
+    &:is(:focus, :focus-visible, :focus-visible) {
+      outline-offset: 0.2rem;
+    }
+
+    &.active {
+      background-color: light-dark(var(--x-primary-500), var(--x-primary-600));
+      .icon i {
+        font-weight: 900;
+      }
+    }
+
+    &.admin-panel-link {
+      margin-block-start: auto;
+    }
+  }
+}

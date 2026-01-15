@@ -3,6 +3,10 @@ export interface InitialConfigModel {
   userInfo: UserInfoModel;
   branding: BrandingModel;
   metaData: MetaDataModel;
+  asideBar: {
+    isCollapsed: boolean;
+    isSticky: boolean;
+  };
   appearance: 'light' | 'dark' | 'system';
 }
 
