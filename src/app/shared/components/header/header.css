@@ -10,5 +10,5 @@
   height: var(--main-header-height);
   padding-inline: calc(var(--main-header-padding) / 1.25);
   padding-block: calc(var(--main-header-padding) / 2);
-  gap: calc(var(--main-header-padding) / 1);
+  transition: all 0.3s ease-in-out;
 }

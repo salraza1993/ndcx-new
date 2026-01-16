@@ -1,5 +1,8 @@
 <div class="banner-perspective-container">
-  <div class="grid-list-container" style="--item-width: calc(300px + 13vw); --item-height: calc(300px + 13vw); --item-quantity: {{ bannerList.length }}">
+  <div
+    class="grid-list-container"
+    style="--item-width: calc(300px + 13vw); --item-height: calc(300px + 13vw); --item-quantity: {{ bannerList.length }}"
+  >
     <ul class="banner-list" data-reverse="false">
       @for (banner of bannerList; track banner + 1) {
         <li class="banner-list__item" [style.--position]="$index + 1">

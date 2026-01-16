@@ -1,3 +1,7 @@
-<!-- <app-client-logo class="max-w-max shrink-0" /> -->
+@if (isCollapsed()) {
+  <app-client-logo animate.enter="slide-in" type="full" variant="color" class="max-w-max shrink-0" />
+}
 <app-header-search />
+<app-notification-button />
+<app-header-wallet />
 <app-header-profile class="shrink-0" />

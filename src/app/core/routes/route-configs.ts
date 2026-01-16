@@ -10,7 +10,7 @@ import { setLayout } from '@layouts/layout-resolver';
  * - `Admin role guard`
  */
 export const ADMIN_ROUTE_CONFIG = {
-  // canActivate: [authGuard, isAdminGuard],
+  canActivate: [authGuard],
   providers: AUTHORIZED_LAYOUT_PROVIDERS,
   resolve: { layout: setLayout(PageLayoutEnum.Authorized) }
 };

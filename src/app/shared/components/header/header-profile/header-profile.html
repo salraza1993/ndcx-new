@@ -1,7 +1,7 @@
 @let userName = `${userInfo?.firstName} ${userInfo?.lastName}`;
 <p-splitbutton label="User Name" class="w-50" [model]="items()" severity="secondary">
   <ng-template #content>
-    <span class="flex items-center font-bold">
+    <span class="flex items-center font-bold" navigate [path]="'/my-profile'">
       <i class="fa-solid fa-user-circle text-xl mr-2 shrink-0"></i>
       <span class="text-ellipsis inline-block w-full whitespace-nowrap">{{ userName || 'User Name' }}</span>
     </span>

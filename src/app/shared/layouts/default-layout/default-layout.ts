@@ -11,7 +11,7 @@ import { ClientConfigService } from '../../../../client-configs/services/client-
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'default-layout-host',
-    // '[style.--aside-width]': "isCollapsed() ? '64px' : 'calc(250px + 1vw)'"
+    '[style.--aside-width]': "isCollapsed() ? '64px' : 'calc(250px + 1vw)'"
   }
 })
 export class DefaultLayout {

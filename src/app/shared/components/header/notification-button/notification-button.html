@@ -1,0 +1,10 @@
+<!-- <p-button pButton class="header-buttons whitespace-nowrap" icon="fa-solid fa-bell" severity="secondary" /> -->
+<div class="notification-button text-xl rounded-md grid place-content-center">
+  @if (notificationsCounter() > 0) {
+    <p-overlaybadge [value]="notificationsCounter()">
+      <i class="fa-regular fa-bell"></i>
+    </p-overlaybadge>
+  } @else {
+    <i class="fa-regular fa-bell"></i>
+  }
+</div>

@@ -11,7 +11,9 @@
  * - Keep selectors specific but not overly complex
  */
 
-/* :root {} */
+:root {
+  --x-button-secondary-background: light-dark(var(--x-surface-100), var(--x-surface-700));
+}
 
 .p-inputtext {
   --x-inputtext-shadow: none;
@@ -27,6 +29,12 @@
     }
   }
 }
+
+/* .p-button-secondary {
+  background-color: var(--x-button-secondary-background);
+  border: 1px solid var(--x-button-secondary-border-color);
+  color: var(--x-button-secondary-color);
+} */
 
 /* Add your custom PrimeNG component overrides here */
 /* Example:

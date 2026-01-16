@@ -4,6 +4,8 @@
   display: grid;
   min-height: 100dvh;
   grid-template-columns: var(--aside-width) 1fr;
+  transition: all 0.3s ease-in-out;
+
   .layout-main-content {
     position: relative;
     padding: 1rem;

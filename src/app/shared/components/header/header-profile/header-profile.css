@@ -1,6 +1,7 @@
 :host {
   /* --x-button-padding-x: 0.5rem; */
-  ::ng-deep .p-splitbutton-button.p-button {
+  /* ::ng-deep .p-splitbutton-button.p-button {
     padding-inline-start: 0.5rem;
-  }
+    padding-inline-end: 0.25rem;
+  } */
 }

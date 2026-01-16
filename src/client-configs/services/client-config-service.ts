@@ -80,13 +80,17 @@ export class ClientConfigService {
     this._storage.set(this._storage.STORAGE_KEY, JSON.stringify(config));
   }
 
-  setAsideBarConfig(isCollapsed: boolean, isSticky = this.getAsideInfo()?.isSticky): void {
-    const currentConfig = this._initialConfig();
-    if (currentConfig) {
-      this._storage.setInObject(this._storage.STORAGE_KEY, 'asideBar', {
-        isCollapsed,
-        isSticky: isSticky ?? currentConfig.asideBar.isSticky
-      });
+  asideToggler(isCollapsed: boolean): void {
+    const currentConfig = this._storage.get(this._storage.STORAGE_KEY);
+    if (!currentConfig) return;
+
+    try {
+      const parsedConfig = JSON.parse(currentConfig) as InitialConfigModel;
+      parsedConfig.asideBar.isCollapsed = isCollapsed;
+      this.setConfig(parsedConfig);
+      this._initialConfig.set(parsedConfig);
+    } catch (error) {
+      console.error('Failed to update aside bar state in config:', error);
     }
   }
 }

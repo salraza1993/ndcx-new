@@ -21,7 +21,7 @@ export class AsideMenu {
   protected readonly asideMenu = signal<AsideMenuItem[]>([
     {
       label: 'Dashboard',
-      icon: 'fa-regular fa-gauge-high',
+      icon: 'fa-regular fa-grid',
       route: '/dashboard'
     },
     {

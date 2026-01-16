@@ -27,6 +27,6 @@ export class Aside {
 
   toggleCollapse(): void {
     this.isCollapsed.update(value => !value);
-    this._clientConfigService.setAsideBarConfig(!this.isCollapsed());
+    this._clientConfigService.asideToggler(this.isCollapsed()!);
   }
 }

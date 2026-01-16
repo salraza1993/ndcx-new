@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { AuthServices } from '@auth/services/auth-services';
 import { ClientConfigService } from '@client/services/client-config-service';
+import { NavigateDirective } from '@directives/navigate';
 import { MenuItem } from 'primeng/api';
 import { SplitButtonModule } from 'primeng/splitbutton';
 
 @Component({
   selector: 'app-header-profile',
-  imports: [SplitButtonModule],
+  imports: [SplitButtonModule, NavigateDirective],
   templateUrl: './header-profile.html',
   styleUrl: './header-profile.css',
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,0 +1,4 @@
+<p-button navigate [path]="'/wallet'" pButton class="header-buttons whitespace-nowrap" severity="secondary">
+  <span pButtonIcon class="text-xl flex items-center"><i class="fa-solid fa-wallet"></i></span>
+  <span pButtonLabel class="font-bold">{{ currencyName() }} {{ walletAmount() | currency: undefined : '' : '1.2-2' }}</span>
+</p-button>

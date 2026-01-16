@@ -34,7 +34,7 @@
     .auth-layout-host-content {
       position: relative;
       border-radius: calc(var(--x-border-radius-xl) + 0.5vw);
-      corner-shape: scoop;
+      /* corner-shape: scoop; */
 
       z-index: 1;
       width: auto;
@@ -93,7 +93,7 @@
 
         .ads-banner-container {
           border-radius: calc(var(--x-border-radius-xl) + 1vw);
-          corner-shape: scoop;
+          /* corner-shape: scoop; */
         }
         .dynamic-content {
           backdrop-filter: none;
