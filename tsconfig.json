@@ -29,6 +29,7 @@
       "@interceptors/*": ["./src/app/core/interceptors/*"],
       "@models/*": ["./src/app/shared/models/*"],
       "@shared/*": ["./src/app/shared/*"],
+      "@components/*": ["./src/app/shared/components/*"],
       "@layouts/*": ["./src/app/shared/layouts/*"],
       "@services/*": ["./src/app/shared/services/*"],
       "@client/*": ["./src/client-configs/*"],

@@ -3,4 +3,19 @@
   ::ng-deep .p-iconfield.p-invalid {
     --x-iconfield-icon-color: var(--x-red-500);
   }
+
+  .toggle-mask {
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    inset-inline-end: 0.25rem;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: light-dark(var(--x-surface-200), var(--x-surface-500));
+    }
+    .pi { text-align: center;}
+  }
 }

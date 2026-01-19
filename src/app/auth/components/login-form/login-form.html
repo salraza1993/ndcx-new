@@ -13,7 +13,7 @@
         size="small"
         fluid
         placeholder="Enter your username"
-        [field]="loginForm.username"
+        [formField]="loginForm.username"
         [ngClass]="isUsernameInvalid"
       />
     </p-iconfield>
@@ -26,9 +26,29 @@
     }
   </div>
   <div class="grid gap-1">
-    <p-iconfield [class]="isPasswordInvalid">
-      <p-inputicon class="pi pi-lock" />
-      <p-password autocomplete="on" [field]="loginForm.password" placeholder="Enter Password" [inputStyleClass]="isPasswordInvalid" fluid [toggleMask]="true" [feedback]="false" />
+    <p-iconfield [class]="isPasswordInvalid" class="relative flex items-center">
+      <p-inputicon class="pi pi-{{ isPasswordMasked() ? 'lock' : 'unlock' }}" />
+      <input
+        [type]="isPasswordMasked() ? 'password' : 'text'"
+        id="password"
+        autocomplete="on"
+        pInputText
+        size="small"
+        fluid
+        placeholder="Enter Password"
+        [formField]="loginForm.password"
+        [ngClass]="isPasswordInvalid"
+      />
+      <span
+        class="toggle-mask rounded-md"
+        role="button"
+        tabindex="0"
+        (keydown.enter)="isPasswordMasked.set(!isPasswordMasked())"
+        (keydown.space)="isPasswordMasked.set(!isPasswordMasked())"
+        (click)="isPasswordMasked.set(!isPasswordMasked())"
+      >
+        <p-inputicon class="pi pi-{{ isPasswordMasked() ? 'eye' : 'eye-slash' }}" />
+      </span>
     </p-iconfield>
     @if (loginForm.password().touched() && loginForm.password().invalid()) {
       <div class="error-list">
@@ -40,7 +60,14 @@
   </div>
   <a routerLink="/forget-password" class="ms-auto text-sm">Forgot Password?</a>
   @let isInValid = loginForm().invalid();
-  <button pButton size="large" [severity]="isInValid ? 'secondary' : 'primary'" [loading]="loading()" [disabled]="loginForm().invalid()" type="submit">
+  <button
+    pButton
+    size="large"
+    [severity]="isInValid ? 'secondary' : 'primary'"
+    [loading]="loading()"
+    [disabled]="loginForm().invalid()"
+    type="submit"
+  >
     <span pButtonLabel>Submit</span>
     <i class="pi pi-sign-in" pButtonIcon></i>
   </button>

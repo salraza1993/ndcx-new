@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, effect, inject, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Field, form, required, submit } from '@angular/forms/signals';
+import { form, FormField, required, submit } from '@angular/forms/signals';
 import { Router, RouterLink } from '@angular/router';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { ButtonModule } from 'primeng/button';
@@ -23,7 +23,7 @@ import { AuthServices, SignInCredentialsType } from '../../services/auth-service
     IconFieldModule,
     InputIconModule,
     ButtonModule,
-    Field,
+    FormField,
     CommonModule,
     RouterLink,
     MessageModule
@@ -42,6 +42,7 @@ export class LoginForm implements OnInit {
     username: 'APIOUTAGENCY',
     password: 'j#A4uX6'
   });
+  isPasswordMasked = signal(true);
 
   protected loginForm = form(this._loginFormModel, schema => {
     required(schema.username, { message: 'Username is required' });

@@ -1,5 +1,4 @@
 :host {
-  --aside-width: calc(250px + 1vw);
   position: relative;
   display: grid;
   min-height: 100dvh;
@@ -8,6 +7,6 @@
 
   .layout-main-content {
     position: relative;
-    padding: 1rem;
+    padding: var(--common-padding);
   }
 }

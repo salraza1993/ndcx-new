@@ -11,4 +11,9 @@
   padding-inline: calc(var(--main-header-padding) / 1.25);
   padding-block: calc(var(--main-header-padding) / 2);
   transition: all 0.3s ease-in-out;
+
+  ::ng-deep .p-inputtext {
+    --x-inputtext-background: light-dark(var(--x-surface-100), var(--x-surface-700));
+    /* --x-inputtext-border-color: none; */
+  }
 }

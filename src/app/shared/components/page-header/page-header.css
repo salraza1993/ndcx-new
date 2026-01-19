@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  .header-content {
+    position: relative;
+    display: flex;
+
+    & .header-content__start {
+      margin-inline-end: auto;
+    }
+    & .header-content__end {
+      margin-inline-start: auto;
+    }
+  }
+}

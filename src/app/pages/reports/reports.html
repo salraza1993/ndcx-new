@@ -1,1 +1,8 @@
-<p>reports works!</p>
+<app-content-wrapper size="md">
+  <app-page-header [heading]="'Reports Header'">
+    <ng-template #end>
+      <p-button type="button" size="small" severity="secondary" label="Refresh" icon="pi pi-undo" class="surface-secondary" />
+    </ng-template>
+  </app-page-header>
+  <p>reports works!</p>
+</app-content-wrapper>

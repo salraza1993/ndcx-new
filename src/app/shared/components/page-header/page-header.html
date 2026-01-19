@@ -1,0 +1,30 @@
+<ng-template #defaultHeader>
+  <h4 class="mb-0">{{ heading() }}</h4>
+</ng-template>
+
+@if (startTemplate() || endTemplate()) {
+  <div class="header-content">
+    @if (startTemplate() || heading()) {
+      <div class="header-content__start">
+        @if (startTemplate()) {
+          <ng-container *ngTemplateOutlet="startTemplate()"></ng-container>
+        } @else {
+          <h4 class="mb-0">{{ heading() }}</h4>
+        }
+        <ng-container *ngTemplateOutlet="startTemplate()"></ng-container>
+      </div>
+    }
+    @if (endTemplate()) {
+      <div class="header-content__end">
+        <ng-container *ngTemplateOutlet="endTemplate()"></ng-container>
+      </div>
+    }
+  </div>
+} @else {
+  @if (!noTitle()) {
+    <ng-container *ngTemplateOutlet="headerTemplate() || defaultHeader"></ng-container>
+  }
+}
+@if (!noBorder()) {
+  <p-divider />
+}

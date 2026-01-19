@@ -6,10 +6,6 @@
   background-color: light-dark(var(--x-surface-50), var(--x-surface-900));
   box-shadow: inset -1px 0 0 0 light-dark(var(--x-surface-300), var(--x-surface-600));
   transition: all 0.3s ease-in-out;
-  /* color: var(--x-surface-100); */
-  &.collapsed {
-    --aside-width: 64px;
-  }
   .aside-wrapper {
     position: sticky;
     inset-block-start: 0;
@@ -29,7 +25,7 @@
         aspect-ratio: 1 / 1;
         transition: all 0.3s ease;
         &:hover {
-          background-color: light-dark(var(--x-surface-300), var(--x-surface-800));
+          background-color: light-dark(var(--x-surface-300), var(--x-surface-700));
         }
       }
     }

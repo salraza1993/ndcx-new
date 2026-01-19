@@ -13,12 +13,24 @@
 
 :root {
   --x-button-secondary-background: light-dark(var(--x-surface-100), var(--x-surface-700));
+  --x-content-border-color: light-dark(var(--x-surface-200), var(--x-surface-600));
 }
 
 .p-inputtext {
   --x-inputtext-shadow: none;
   &:is(.p-filled) {
     font-weight: 700;
+  }
+}
+
+p-button {
+  &:is(.p-surface-secondary, .surface-secondary) {
+      --x-button-secondary-background: light-dark(var(--x-surface-200), var(--x-surface-600));
+    --x-button-secondary-border-color: light-dark(var(--x-surface-300), var(--x-surface-500));
+    --x-button-secondary-color: light-dark(var(--x-surface-950), var(--x-neutral-200));
+    --x-button-secondary-hover-background: light-dark(var(--x-surface-800), var(--x-surface-800));
+    --x-button-secondary-hover-border-color: light-dark(var(--x-surface-950), var(--x-surface-900));
+    --x-button-secondary-hover-color: light-dark(var(--x-neutral-50), var(--x-neutral-100));
   }
 }
 

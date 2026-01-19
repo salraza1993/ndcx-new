@@ -1,0 +1,9 @@
+export enum ModuleType {
+  Flights = '14',
+  Hotels = '18'
+}
+
+export interface ModuleDto {
+  moduleName: string;
+  moduleType: ModuleType;
+}

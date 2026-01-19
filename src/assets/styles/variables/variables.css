@@ -1,5 +1,18 @@
 :root {
+  --container-size-sm: calc(40rem + 2vw); /* 640px */
+  --container-size-md: calc(64rem + 2vw); /* 992px */
+  --container-size-lg: calc(75rem + 2vw); /* 1200px */
+  --container-size-xl: calc(86rem + 2vw); /* 1376px */
+  --container-size-full: 100%; /* Full Width */
+
+  --common-padding: 1rem;
+  --aside-width: calc(250px + 1vw);
   --body-bg: light-dark(var(--x-surface-100), var(--x-surface-700));
   --main-header-height: 4rem; /* 64px */
   --main-header-padding: calc(var(--main-header-height) / 4);
+  --max-container-width: var(--container-size-lg);
+
+  &[aside-collapsed="true"] {
+    --aside-width: 64px;
+  }
 }

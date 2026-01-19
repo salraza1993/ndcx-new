@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
+import { PageHeader } from '@components/page-header/page-header';
 import { InputTextModule } from 'primeng/inputtext';
 import { AuthServices } from '../../auth/services/auth-services';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [InputTextModule, ButtonModule],
+  imports: [InputTextModule, ContentWrapper, PageHeader],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
