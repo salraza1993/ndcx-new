@@ -1,3 +1,6 @@
-/* :host {
+:host {
+  ::ng-deep .p-selectbutton .p-togglebutton {
+    background-color: red;
+  }
+}
 
-} */

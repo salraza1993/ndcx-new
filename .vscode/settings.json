@@ -63,7 +63,10 @@
     "APIOUTAGENCY",
     "salraza",
     "inputotp",
-    "overlaybadge"
+    "overlaybadge",
+    "buttongroup",
+    "selectbutton",
+    "togglebutton",
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

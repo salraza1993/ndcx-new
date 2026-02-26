@@ -14,6 +14,7 @@
 :root {
   --x-button-secondary-background: light-dark(var(--x-surface-100), var(--x-surface-700));
   --x-content-border-color: light-dark(var(--x-surface-200), var(--x-surface-600));
+  /* --x-togglebutton-background: light-dark(var(--x-surface-50), var(--x-surface-700)); */
 }
 
 .p-inputtext {
