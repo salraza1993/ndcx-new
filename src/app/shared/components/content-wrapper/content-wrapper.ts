@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 type Size = 'sm' | 'md' | 'lg' | 'xl' | 'full';
 @Component({
   selector: 'app-content-wrapper',
@@ -13,6 +13,7 @@ type Size = 'sm' | 'md' | 'lg' | 'xl' | 'full';
       max-width: var(--max-container-width);
     }
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     class: 'app-content-wrapper-host',
     '[class]': '`app-content-wrapper-size--${size()}`',

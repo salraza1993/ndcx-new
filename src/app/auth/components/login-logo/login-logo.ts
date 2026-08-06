@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-login-logo',
@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     alt="Logo Dark"
   />`,
   styleUrl: './login-logo.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: { class: 'login-logo-host' }
 })
 export class LoginLogo {}

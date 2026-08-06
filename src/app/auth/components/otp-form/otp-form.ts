@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputOtpModule } from 'primeng/inputotp';
@@ -8,6 +8,7 @@ import { InputOtpModule } from 'primeng/inputotp';
   imports: [InputOtpModule, FormsModule, ButtonModule],
   templateUrl: './otp-form.html',
   styleUrl: './otp-form.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     class: 'otp-form-host flex flex-col gap-4'
   }

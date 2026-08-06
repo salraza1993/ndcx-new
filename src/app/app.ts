@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ClientConfigService } from '@client/services/client-config-service';
 import { AuthLayout } from '@layouts/auth-layout/auth-layout';
@@ -11,6 +11,7 @@ import { LayoutService } from '@layouts/layout.service';
   selector: 'app-root',
   imports: [RouterOutlet, AuthLayout, DefaultLayout, ErrorLayout],
   templateUrl: './app.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: `
     :host {
       display: block;

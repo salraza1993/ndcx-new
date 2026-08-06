@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
 import { PageHeader } from '@components/page-header/page-header';
@@ -21,6 +21,7 @@ import { SalesChart } from './_components/sales-chart/sales-chart';
     FormsModule
   ],
   templateUrl: './reports.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './reports.css'
 })
 export class Reports {

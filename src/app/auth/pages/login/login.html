@@ -1,4 +1,4 @@
-@let userName = `${userInfo?.firstName} ${userInfo?.lastName}`;
+@let userName = `${$safeNavigationMigration(userInfo?.firstName)} ${$safeNavigationMigration(userInfo?.lastName)}`;
 @if (showOtpForm()) {
   <button
     pButton

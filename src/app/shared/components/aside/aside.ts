@@ -1,4 +1,4 @@
-import { Component, inject, linkedSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, linkedSignal } from '@angular/core';
 import { AuthServices } from '@auth/services/auth-services';
 import { ClientConfigService } from '@client/services/client-config-service';
 import { ClientLogo } from '../client-logo/client-logo';
@@ -9,6 +9,7 @@ import { AsideMenu } from './aside-menu/aside-menu';
   imports: [ClientLogo, AsideMenu],
   templateUrl: './aside.html',
   styleUrl: './aside.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     class: 'app-aside-host',
     '[class.collapsed]': 'isCollapsed()'

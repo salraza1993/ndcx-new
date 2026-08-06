@@ -1,4 +1,4 @@
-@let userName = `${userInfo?.firstName} ${userInfo?.lastName}`;
+@let userName = `${$safeNavigationMigration(userInfo?.firstName)} ${$safeNavigationMigration(userInfo?.lastName)}`;
 <p-splitbutton label="User Name" class="w-50" [model]="items()" severity="secondary">
   <ng-template #content>
     <span class="flex items-center font-bold" navigate [path]="'/my-profile'">

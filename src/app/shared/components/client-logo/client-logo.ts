@@ -1,9 +1,10 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-client-logo',
   imports: [],
   templateUrl: './client-logo.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './client-logo.css'
 })
 export class ClientLogo {

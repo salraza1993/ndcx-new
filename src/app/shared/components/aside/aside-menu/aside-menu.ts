@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 interface AsideMenuItem {
@@ -13,6 +13,7 @@ interface AsideMenuItem {
   imports: [RouterModule, RouterLink],
   templateUrl: './aside-menu.html',
   styleUrl: './aside-menu.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     class: 'aside-menu flex flex-col gap-2'
   }
