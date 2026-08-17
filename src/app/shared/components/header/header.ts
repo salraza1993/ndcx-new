@@ -3,8 +3,8 @@ import { ClientConfigService } from '../../../../client-configs/services/client-
 import { ClientLogo } from '../client-logo/client-logo';
 import { HeaderProfile } from './header-profile/header-profile';
 import { HeaderSearch } from './header-search/header-search';
-import { HeaderWallet } from "./header-wallet/header-wallet";
-import { NotificationButton } from "./notification-button/notification-button";
+import { HeaderWallet } from './header-wallet/header-wallet';
+import { NotificationButton } from './notification-button/notification-button';
 
 @Component({
   selector: 'app-header',

@@ -22,5 +22,8 @@
     min-height: 100dvh;
     background-color: var(--body-bg);
   }
+  #p-license-host {
+    display: none !important;
+  }
 }
 

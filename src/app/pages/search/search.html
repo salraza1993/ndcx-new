@@ -1,4 +1,11 @@
 <app-content-wrapper size="md">
-  <app-page-header [heading]="'Search Header'"></app-page-header>
-  <p>Search works!</p>
+  <!-- <app-page-header [heading]="'Search Header'"></app-page-header> -->
+  <p-selectbutton
+    [options]="stateOptions()"
+    [(ngModel)]="value"
+    optionLabel="label"
+    optionValue="value"
+    aria-labelledby="basic"
+  />
 </app-content-wrapper>
+                                                                                                                                                                                                                                                                                                     

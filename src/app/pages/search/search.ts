@@ -1,11 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
-import { PageHeader } from '@components/page-header/page-header';
+import { SelectButtonModule } from 'primeng/selectbutton';
 @Component({
   selector: 'app-search',
-  imports: [ContentWrapper, PageHeader],
+  imports: [ContentWrapper, SelectButtonModule, FormsModule],
   templateUrl: './search.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrl: './search.css'
+  styleUrls: ['./search.css'],
+  host: { class: 'app-search-host' }
 })
-export class Search {}
+export class Search {
+  protected value = signal('one-way');
+  protected stateOptions = signal<{ label: string; value: string }[]>([
+    { label: 'One-Way', value: 'one-way' },
+    { label: 'Return', value: 'return' }
+  ]);
+}

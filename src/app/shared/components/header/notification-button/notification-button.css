@@ -6,7 +6,7 @@
     cursor: pointer;
     color: var(--x-text-500);
     background-color: light-dark(var(--x-surface-100), var(--x-surface-700));
-    height: calc(var(--main-header-height) - var(--main-header-padding) * 1.5);
+    height: calc(var(--main-header-height) - var(--main-header-padding) * 1.825);
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
   }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { AuthServices } from '@auth/services/auth-services';
 import { ClientConfigService } from '@client/services/client-config-service';
 import { NavigateDirective } from '@directives/navigate';
@@ -10,7 +10,9 @@ import { SplitButtonModule } from 'primeng/splitbutton';
   imports: [SplitButtonModule, NavigateDirective],
   templateUrl: './header-profile.html',
   styleUrl: './header-profile.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  host: {
+    class: 'header-profile-host block'
+  }
 })
 export class HeaderProfile {
   private _authService = inject(AuthServices);
